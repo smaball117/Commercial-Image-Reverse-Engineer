@@ -1,0 +1,6 @@
+interface:
+  display_name: "Commercial Image Reverse Engineer"
+  short_description: "反推商业摄影逻辑，锁定真实产品并生成可审核提示词"
+  default_prompt: "使用 $commercial-image-reverse-engineer，图1为商品身份锚点，图2仅供摄影语言参考。先拆解主体与视觉控制，再输出可复制提示词和审核清单。"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,134 @@
+{
+  "task": {
+    "mode": "prompt",
+    "aspect_ratio": "3:4",
+    "output_count": 1,
+    "target_model": "generic"
+  },
+  "assets": {
+    "subject_image": "用户商品图：图1（示例虚构）",
+    "reference_images": [
+      "视觉参考：图2（示例虚构）"
+    ],
+    "generated_image": null
+  },
+  "reference_policy": {
+    "transfer": [
+      "lighting",
+      "palette",
+      "composition",
+      "depth",
+      "mood"
+    ],
+    "exclude": [
+      "brand_identity",
+      "product_shape",
+      "irrelevant_props",
+      "reference_text"
+    ],
+    "notes": "不复制图2的瓶子或绑在瓶颈上的附加道具"
+  },
+  "subject": {
+    "identity": "LUMEN LAB（完全虚构的测试产品）",
+    "category": "护肤精华",
+    "shape": "短圆柱形厚底滴管瓶，圆润平缓肩部，白色圆形软胶滴头，居中垂直",
+    "materials": [
+      {
+        "part": "玻璃瓶身",
+        "appearance": "浅琥珀色半透明雾面玻璃",
+        "light_response": "柔和宽高光、低眩光、内部透光和底部厚玻璃微弱折射"
+      },
+      {
+        "part": "滴管头和瓶盖",
+        "appearance": "哑光暖白硅胶胶头和奶白色螺口塑料盖",
+        "light_response": "漫反射、保留体积亮暗，不得变金属"
+      }
+    ],
+    "components": [
+      {
+        "part": "滴管组件",
+        "appearance": "白色软胶球头、无金属盖、完全闭合",
+        "lock": "hard"
+      },
+      {
+        "part": "瓶体",
+        "appearance": "一只厚底雾面圆柱瓶，不能增加腰环与挂绳",
+        "lock": "hard"
+      }
+    ],
+    "state": "一瓶全新闭合状态的产品，端正垂直站立",
+    "must_preserve": [
+      "仅一瓶",
+      "滴头及瓶盖颜色不变",
+      "磨砂玻璃材质不变",
+      "包装文字不自行猜写"
+    ],
+    "label": {
+      "policy": "preserve",
+      "exact_text": [
+        "LUMEN LAB",
+        "SERUM 30 mL"
+      ],
+      "source": "user_confirmed",
+      "legibility": "user_confirmed"
+    },
+    "quantity": 1
+  },
+  "scene": {
+    "concept": "深绿森林侧逆光美妆微景观，苔藓和松针形成克制空间层次",
+    "background": "深墨绿柔焦林影，局部微暖光点，主体背后暗度略低于瓶身边缘亮度",
+    "support_type": "physical",
+    "support": "一根横向粗松枝的平坦分叉处",
+    "props": [
+      "两侧稀疏的松针",
+      "少量真实苔藓"
+    ],
+    "placement": "商品位于中间略偏下，正面面向镜头，垂直直立",
+    "contact": "瓶底与树枝分叉充分接触并投下柔和紧贴的暗部影",
+    "occlusion": "松针只在左右边缘烘托，不挡滴头和正面标签区域",
+    "physics": "松枝足够粗以支撑瓶体，重力方向垂直向下"
+  },
+  "lighting": {
+    "key": "右后上方林隙暖色柔和侧逆光",
+    "fill": "左前方大面积微弱中性反光，保证正面瓶盖结构仍可见",
+    "rim": "右侧玻璃轮廓低强度透亮边缘",
+    "contrast": "明暗分明但不死黑，参考图像气质而非测得物理数值",
+    "shadows": "瓶底支撑面接触影自然，树皮阴影方向与主光一致"
+  },
+  "camera": {
+    "focal_length_equiv": "约85mm等效中长焦（建议）",
+    "viewpoint": "近于树枝高度的略低平视角",
+    "framing": "单品中近景",
+    "subject_scale": "商品约占画面高度的一半；非固定面积百分比",
+    "focus": "瓶身正面与滴管盖轮廓",
+    "depth_of_field": "主体清晰，前方边缘松针与远背景渐进柔焦"
+  },
+  "color": {
+    "dominant": "深森林绿与浅琥珀",
+    "accent": "哑光暖白及少量苔藓绿",
+    "hierarchy": "瓶体为第一焦点，松针为视觉框架",
+    "avoid": "荧光绿、大面积暖黄亮块"
+  },
+  "quality": {
+    "photographic_goal": "真实摄影质感，树皮颗粒、玻璃粗糙度及软胶漫反射明确，不做过度锐化或CG塑料光",
+    "aspect_ratio": "3:4"
+  },
+  "negative_constraints": [
+    "禁止背景新增文字和水印",
+    "禁止参考图品牌/多余道具迁移",
+    "禁止包装区域被松针遮挡",
+    "禁止把瓶盖改为金属"
+  ],
+  "observations": {
+    "verified_from_image": [],
+    "user_provided": [
+      "此测试示例中 LUMEN LAB 和 SERUM 30 mL 视为用户明确提供，仅用于验证文字政策"
+    ],
+    "inferred_or_suggested": [
+      "本例全部商品与摄影条件为合成演示，不是原文截图转录"
+    ],
+    "unknown": [
+      "真实包装印刷字未提供，不猜写"
+    ]
+  }
+}

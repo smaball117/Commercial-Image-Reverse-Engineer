@@ -1,0 +1,131 @@
+{
+  "task": {
+    "mode": "prompt",
+    "aspect_ratio": "1:1",
+    "output_count": 1,
+    "target_model": "reference-image-model"
+  },
+  "assets": {
+    "subject_image": "合成测试商品图1：虚构深绿透明喷雾瓶",
+    "reference_images": [
+      "合成测试参考图2：浅色高调水花场景"
+    ],
+    "generated_image": null
+  },
+  "reference_policy": {
+    "transfer": [
+      "lighting",
+      "composition",
+      "palette",
+      "mood",
+      "depth"
+    ],
+    "exclude": [
+      "brand_identity",
+      "product_shape",
+      "irrelevant_props",
+      "reference_text"
+    ],
+    "notes": "参考只借高调空间、水流穿插、画面动势；不借参考瓶身和牌子"
+  },
+  "subject": {
+    "identity": "净澈清水喷雾（原创虚构产品）",
+    "category": "护肤喷雾",
+    "shape": "短宽圆柱绿色透明厚底玻璃瓶，银灰泵头带窄长喷嘴，两个同轴阶梯瓶肩",
+    "materials": [
+      {
+        "part": "瓶体",
+        "appearance": "厚底墨绿色透亮玻璃，瓶肩和瓶底有真实折射",
+        "light_response": "主光中形成长形柔亮高光、瓶底折射、绿色液体反射不偏黑"
+      },
+      {
+        "part": "喷头",
+        "appearance": "银灰喷涂金属喷头，结构平直紧凑",
+        "light_response": "克制窄高光、弱金属反射，喷嘴不可变为滴管"
+      }
+    ],
+    "components": [
+      {
+        "part": "泵头",
+        "appearance": "银灰喷头和细窄喷嘴",
+        "lock": "hard"
+      },
+      {
+        "part": "瓶身",
+        "appearance": "一支绿色喷雾瓶，固定瓶肩和玻璃厚底",
+        "lock": "hard"
+      }
+    ],
+    "state": "一瓶向右上倾斜约30°，明确悬浮",
+    "must_preserve": [
+      "仅一瓶",
+      "泵头和喷嘴形状不可更换",
+      "绿色透明玻璃保持",
+      "不为商品增加绳子或木牌"
+    ],
+    "label": {
+      "policy": "unverified",
+      "exact_text": [],
+      "source": "unknown",
+      "legibility": "not_verified"
+    },
+    "quantity": 1
+  },
+  "scene": {
+    "concept": "高调暖白背景的清透水感美妆悬浮摄影，单瓶与清澈水流穿插",
+    "background": "柔和暖白色无缝背景，微弱绿灰过渡，没有建筑或文字",
+    "support_type": "suspended",
+    "support": "无实体承载",
+    "props": [
+      "两道清澈透明横向水流",
+      "少量离散水滴"
+    ],
+    "placement": "瓶体中间偏左，瓶头朝右上方30°倾斜",
+    "contact": "无实体接触，水流从瓶体前后自然绕过，不穿透玻璃",
+    "occlusion": "水流不得遮挡泵头关键结构和正面商品标签",
+    "physics": "强调可解释的广告悬浮姿态，横向水流前后交织，所有水滴体积和亮边符合单一光源"
+  },
+  "lighting": {
+    "key": "右上大面积柔光形成瓶身清晰但温和的高光带",
+    "fill": "正面低强度中性补光让玻璃厚度可见",
+    "rim": "左后方柔和边缘亮线",
+    "contrast": "高调但亮面和暗面有层次，透明水流不变牛奶",
+    "shadows": "无接触阴影，允许液体与瓶体前后产生局部遮挡和暗边"
+  },
+  "camera": {
+    "focal_length_equiv": "约70mm等效中长焦（创作建议）",
+    "viewpoint": "平视略偏上，避免喷头透视畸变",
+    "framing": "单品中近景且保留水流伸展空间",
+    "subject_scale": "商品约占画面高度50%，留白供水流",
+    "focus": "瓶体前脸与泵头结构",
+    "depth_of_field": "商品完整清晰，远端水滴轻微虚化"
+  },
+  "color": {
+    "dominant": "暖白、透明水色与深绿",
+    "accent": "少量银灰高光",
+    "hierarchy": "深绿瓶为唯一焦点，水流承接动势",
+    "avoid": "荧光青色或大量气泡"
+  },
+  "quality": {
+    "photographic_goal": "高调写实商业微距，透明水流边界与绿色玻璃反射方向一致，无3D硬边",
+    "aspect_ratio": "1:1"
+  },
+  "negative_constraints": [
+    "禁止从参考图迁移瓶型、品牌、标签与泵头",
+    "禁止新增第二瓶或将喷头改为滴管",
+    "禁止实体底座/树枝/地面接触阴影",
+    "禁止水流变成乳白胶状物或穿透主体",
+    "禁止新增背景文字或大面积装饰"
+  ],
+  "observations": {
+    "verified_from_image": [],
+    "user_provided": [],
+    "inferred_or_suggested": [
+      "本案例为原创新编演示，未验证真实图像源",
+      "画幅与镜头属于创作意图而非照片EXIF"
+    ],
+    "unknown": [
+      "实际包装标签内容未提供，须保留区域并建议真实合成"
+    ]
+  }
+}

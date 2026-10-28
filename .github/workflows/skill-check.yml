@@ -1,0 +1,20 @@
+name: Skill checks
+on:
+  push:
+  pull_request:
+jobs:
+  offline-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate skill structure and tests
+        run: |
+          S=.agents/skills/commercial-image-reverse-engineer
+          python "$S/scripts/check_skill.py"
+          python -m unittest discover -s "$S/tests" -v
+          python "$S/scripts/validate_brief.py" --brief "$S/examples/forest-serum.brief.json"
+          python "$S/scripts/validate_brief.py" --brief "$S/examples/water-splash.brief.json"
+          python "$S/scripts/compile_prompt.py" --brief "$S/examples/forest-serum.brief.json" --out output-smoke

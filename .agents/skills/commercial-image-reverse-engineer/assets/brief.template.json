@@ -1,0 +1,113 @@
+{
+  "task": {
+    "mode": "prompt",
+    "aspect_ratio": "3:4",
+    "output_count": 1,
+    "target_model": "generic"
+  },
+  "assets": {
+    "subject_image": "图1或实际商品图路径",
+    "reference_images": [
+      "图2或实际参考图路径"
+    ],
+    "generated_image": null
+  },
+  "reference_policy": {
+    "transfer": [
+      "lighting",
+      "composition",
+      "palette",
+      "depth"
+    ],
+    "exclude": [
+      "brand_identity",
+      "product_shape",
+      "irrelevant_props",
+      "reference_text"
+    ],
+    "notes": "参考图仅迁移摄影语言，不迁移商品身份"
+  },
+  "subject": {
+    "identity": "用户产品名（核实）",
+    "category": "产品分类",
+    "shape": "可见外形、比例、肩部和底部结构",
+    "materials": [
+      {
+        "part": "瓶身",
+        "appearance": "按实际图片核对",
+        "light_response": "对应材料的反射/透光表现"
+      }
+    ],
+    "components": [
+      {
+        "part": "瓶盖",
+        "appearance": "形状/颜色/材质/开合状态",
+        "lock": "hard"
+      }
+    ],
+    "state": "实际开合、数量、摆放状态",
+    "must_preserve": [
+      "图1实际产品所有标志性部件"
+    ],
+    "label": {
+      "policy": "unverified",
+      "exact_text": [],
+      "source": "unknown",
+      "legibility": "not_verified"
+    },
+    "quantity": 1
+  },
+  "scene": {
+    "concept": "商业摄影场景",
+    "background": "颜色/明度/层次",
+    "support_type": "physical",
+    "support": "实体承载台面材料",
+    "props": [
+      "仅必要道具"
+    ],
+    "placement": "画面主体位置和方向",
+    "contact": "底部与承载面真实贴合、接触阴影",
+    "occlusion": "道具不得遮挡主体关键结构/标签",
+    "physics": "真实重力、透视与空间关系"
+  },
+  "lighting": {
+    "key": "主光方向/软硬",
+    "fill": "补光方向/作用",
+    "rim": "轮廓光或无",
+    "contrast": "相对亮暗层次，未测量不写实测光比",
+    "shadows": "接触影、投影方向和环境反弹"
+  },
+  "camera": {
+    "focal_length_equiv": "创作建议，非 EXIF",
+    "viewpoint": "机位与俯仰",
+    "framing": "景别",
+    "subject_scale": "注明面积/宽高占比定义",
+    "focus": "对焦对象",
+    "depth_of_field": "景深安排"
+  },
+  "color": {
+    "dominant": "主色调",
+    "accent": "辅助色",
+    "hierarchy": "视觉焦点及主次",
+    "avoid": "避免抢主体的色彩"
+  },
+  "quality": {
+    "photographic_goal": "写实商业摄影，纹理不过锐",
+    "aspect_ratio": "3:4"
+  },
+  "negative_constraints": [
+    "禁止产品被参考图商品替换",
+    "禁止背景出现额外文字和水印",
+    "禁止违背物理的悬浮和穿模"
+  ],
+  "observations": {
+    "verified_from_image": [
+      "请填写确实看见的事实"
+    ],
+    "user_provided": [],
+    "inferred_or_suggested": [],
+    "unknown": [
+      "无法从图确认的标签小字"
+    ]
+  }
+}
