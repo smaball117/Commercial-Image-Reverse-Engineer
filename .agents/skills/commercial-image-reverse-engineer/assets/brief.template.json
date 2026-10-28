@@ -49,7 +49,7 @@
     "must_preserve": [
       "图1实际产品所有标志性部件"
     ],
-    "label": {
+    "provenance": {\n      "identity": "visible_in_source 或 user_confirmed 或 inferred",\n      "shape": "visible_in_source 或 user_confirmed 或 inferred",\n      "materials": "visible_in_source 或 user_confirmed 或 inferred",\n      "components": "visible_in_source 或 user_confirmed 或 inferred",\n      "state": "visible_in_source 或 user_confirmed 或 inferred"\n    },\n    "label": {
       "policy": "unverified",
       "exact_text": [],
       "source": "unknown",

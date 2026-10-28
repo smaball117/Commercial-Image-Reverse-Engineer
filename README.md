@@ -23,7 +23,7 @@ Commercial-Image-Reverse-Engineer/
         └── tests/                   # 结构、冲突、输出回归
 ```
 
-`SKILL.md` 在 `.agents/skills/...` 是因为 **Codex 从项目根目录启动时会搜索 `.agents/skills`**。全局使用请将整个 `commercial-image-reverse-engineer` 子目录复制到 `~/.agents/skills/`，而不是把仓库根目录复制进去。
+`SKILL.md` 在 `.agents/skills/...` 是因为 **Codex 从项目根目录启动时会搜索 `.agents/skills`**。全局使用请将整个 `commercial-image-reverse-engineer` 子目录复制到 `$CODEX_HOME/skills/`（未设置时通常为 `~/.codex/skills/`），而不是把仓库根目录复制进去。
 
 ## 2. 在 Codex 中使用
 

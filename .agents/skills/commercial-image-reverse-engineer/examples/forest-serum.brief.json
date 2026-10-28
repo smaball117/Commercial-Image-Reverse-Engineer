@@ -63,6 +63,7 @@
       "磨砂玻璃材质不变",
       "包装文字不自行猜写"
     ],
+    "provenance": {"identity": "inferred", "shape": "inferred", "materials": "inferred", "components": "inferred", "state": "inferred"},
     "label": {
       "policy": "unverified",
       "exact_text": [],

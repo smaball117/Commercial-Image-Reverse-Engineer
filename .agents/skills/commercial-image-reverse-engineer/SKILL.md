@@ -34,7 +34,7 @@ description: "Reverse-engineer product photo references into controlled, high-fi
 
 ### 2. 锁定主体（四锁）并标证据
 
-分别确认并记录：**外形**（轮廓/长宽/朝向）、**材质**（各部件透反光）、**部件**（盖、喷头、领口、标签、图案、数量）、**状态**（闭合/打开/位置/接触）。对每个关键结论标记：`VISIBLE` 源图清楚可见；`USER` 用户描述；`INFERRED` 合理创作建议；`UNKNOWN` 看不清。
+分别确认并记录：**外形**（轮廓/长宽/朝向）、**材质**（各部件透反光）、**部件**（盖、喷头、领口、标签、图案、数量）、**状态**（闭合/打开/位置/接触）。对每个关键结论标记：`VISIBLE` 源图清楚可见；`USER` 用户描述；`INFERRED` 合理创作建议；`UNKNOWN` 看不清。正式 Brief 还须在 `subject.provenance` 中为四锁逐项写入 `visible_in_source|user_confirmed|inferred`；`UNKNOWN` 不能伪装成已锁定的商品事实。
 
 品牌/包装文字独立裁决：`preserve` 仅在真实文字已核实；`unverified` 看不清时保持原标签区域并建议精准合成；`none` 原物无文字；`remove` 必须有用户授权。**不得猜品牌、净含量、材质、隐藏背面细节**。
 
@@ -60,7 +60,7 @@ description: "Reverse-engineer product photo references into controlled, high-fi
 - 参考图上绑的麻绳、挂牌、其他瓶盖、参考品牌，只能视为参照情景，不可以无授权添加到产品。
 - 用户想保留背景只修脸/商标/产品时，启动**最小改动**，不重做已认可的光和布局。
 
-### 5. 建立结构化 Brief + 自动检查（正式 prompt 模式）
+### 5. 建立结构化 Brief + 自动检查（`prompt` / `audit_repair` 模式）
 
 使用 [`assets/brief.template.json`](assets/brief.template.json)，契约见 [`references/input-contract.md`](references/input-contract.md)。只有内容的关键商品事实真实可见或由用户确认，才填写为已确认。脚本不会读图片，**它只能检查由 Agent/人填入的文本和结构**。
 

@@ -63,6 +63,7 @@
       "绿色透明玻璃保持",
       "不为商品增加绳子或木牌"
     ],
+    "provenance": {"identity": "inferred", "shape": "inferred", "materials": "inferred", "components": "inferred", "state": "inferred"},
     "label": {
       "policy": "unverified",
       "exact_text": [],

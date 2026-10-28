@@ -8,11 +8,11 @@
 
 `assets/brief.template.json` 提供可复制字段；`scripts/validate_brief.py` 实施最低一致性检查。
 
-- `task.mode`: `analyze|prompt|audit_repair`；`task.aspect_ratio` 如 `3:4` 或 `1:1`。
+- `task.mode`: `prompt|audit_repair`；`reference_analysis` 在对话中完成，不需要强行填入 Brief；`task.aspect_ratio` 如 `3:4` 或 `1:1`。
 - `assets.subject_image`: 商品源图地址、代号或文件名，非模型自造路径；`assets.reference_images`: 场景参考图列表；`assets.generated_image`: 只有真实生成结果时填写。
 - `reference_policy.transfer`: 明确继承哪些可解释的视觉属性，允许：`lighting|palette|composition|camera|depth|background|prop_logic|mood`。
 - `reference_policy.exclude`: 不继承哪些参考源元素，如 `brand_identity|product_shape|irrelevant_props|reference_text`。
-- `subject`: `identity/category/shape/materials/components/state/must_preserve/label`，四锁必须能够清晰描述。
+- `subject`: `identity/category/shape/materials/components/state/must_preserve/provenance/label`。`provenance` 必须为 `identity/shape/materials/components/state` 分别标记 `visible_in_source|user_confirmed|inferred`；四锁必须能够清晰描述。
 - `scene`: `concept/background/support_type/support/props/placement/contact/occlusion/physics`。`support_type=physical|suspended|none`。
 - `lighting`: `key/fill/rim/contrast/shadows`，数值型光比仅用于设定目标，非图像测量。
 - `camera`: `focal_length_equiv/viewpoint/framing/subject_scale/focus/depth_of_field`；焦段空缺应写“建议”，不可声明镜头 EXIF。
